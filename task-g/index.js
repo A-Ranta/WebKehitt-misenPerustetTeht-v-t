@@ -6,7 +6,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("registrationForm");
     const table = document.getElementById("userInformation").querySelector("tbody");
-    //const tbody = document.querySelector('#userInformation tbody');
 
     //lomakkeen tekstikentät
     const fields = {
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //puh.nro validointi ja virheilmoitus
         const phone = fields.phone.value.replace(/\s+/g, '');
-        if (!/^\+358\d{7,9}$/.test(phone)) {
+        if (!/^\+358\d{7,12}$/.test(phone)) {
             errorMessage.phone.textContent = 'Phone number must start with +358 and contain 7-9 digits.';
             valid = false;
         }
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const age = today.getFullYear() - BD.getFullYear() -
                 (today < new Date(today.getFullYear(), BD.getMonth(), BD.getDate()) ? 1 : 0);
             if (BD > today) {
-                errorMessage.BD.textContent = 'Birth date cannot be in the future.';
+                errorMessage.BD.textContent = "You can't be born in the future.";
                 valid = false;
             } else if (age < 13) {
                 errorMessage.BD.textContent = 'You must be at least 13 years old.';
@@ -83,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // lomakkeen lähetys
-    //document.getElementById("registrationForm").submit();
     form.addEventListener('submit', function (e) {
+        console.log("testaus")
         e.preventDefault();
         if (!validate()) return;
 
@@ -95,15 +94,31 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create new table row
         const row = document.createElement('tr');
 
-        //table data td/infoSolu
-        //const row = document.createElement("td");
-        //infoCell.textContent = userInformation;
-        //row.appendChild(infoCell);
+        //table data vienti tableen
+        const timestampCell = document.createElement("td");
+        timestampCell.textContent = timestamp;
+        row.appendChild(timestampCell);
 
+        const nameCell = document.createElement("td");
+        nameCell.textContent = fields.name.value.trim();
+        row.appendChild(nameCell);
 
+        const emailCell = document.createElement("td");
+        emailCell.textContent = fields.email.value.trim();
+        row.appendChild(emailCell);
 
+        const phoneCell = document.createElement("td");
+        phoneCell.textContent = fields.phone.value.trim();
+        row.appendChild(phoneCell);
 
-        //tbody.appendChild(row);
+        const BDCell = document.createElement("td");
+        BDCell.textContent = fields.BD.value;
+        row.appendChild(BDCell);
+
+        const termsCell = document.createElement("td");
+        termsCell.textContent = fields.terms.checked ? "Yes" : "No";
+        row.appendChild(termsCell);
+
         table.appendChild(row);
 
         // Reset form and focus
