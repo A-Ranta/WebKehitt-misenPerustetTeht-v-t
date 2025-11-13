@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form with validation</title>
+  <!-- <link rel="stylesheet" href="style.css">-->
+  <script src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white-100 text-gray-800 min-h-screen flex flex-col">
+  <!--
+    Author: Antti Ranta
+    Date: 6.11.10.2025
+  -->
+  <!--Header luokka-->
+  <header class="bg-neutral-600 text-white p-3">
+    <h1 class="text-center text-3xl font-semibold">Form with validation</h1>
+  </header>
+
+  <!--opiskelijan tiedot-->
+  <main class="flex-1 container mx-auto p-2">
+    <!-- Top row split into two blocks -->
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <!-- Student info (30%) -->
+      <section class="text-center bg-white-6 rounded-2xl shadow-md md:col-span-1">
+        <h2 class="text-xl font-semibold mb-4 border-b pb-2">Information</h2>
+        <p class="text-black-700"><span class="font-medium">Name:</span> Antti Ranta</p>
+        <p class="text-black-700"><span class="font-medium">Group:</span> NTIS20K</p>
+      </section>
+
+      <!--Lomake osio-->
+      <!-- Controls (70%): -->
+      <section class="bg-white p-2 rounded-2xl shadow-md md:col-span-2">
+        <h2 class="text-xl font-semibold mb-6 border-b pb-2">Please fill out your information</h2>
+
+        <!--1.aikaleima-->
+        <form id="registrationForm" novalidate class="space-y-5">
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <!--2.nimi-->
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Name</label>
+            <input id="name" name="name" type="text" minlength="3" maxlength="20" required
+              placeholder="Input your full name here..."
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <!--error message-->
+            <div class="text-red-500 text-sm mt-1" id="errorName"></div>
+          </div>
+
+          <!--3.email-->
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+            <input id="email" name="email" type="email" required placeholder="name@example.com"
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <!--error message-->
+            <div class="text-red-500 text-sm mt-1" id="errorEmail"></div>
+          </div>
+
+          <!--4.puhelin-->
+          <div>
+            <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
+            <input id="phone" name="phone" type="tel" pattern="^\+358\d{7,12}$" required
+              placeholder="+358 area number..."
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <!--error message-->
+            <div class="text-red-500 text-sm mt-1" id="errorPhone"></div>
+          </div>
+
+          <!--5.syntymäaika-->
+          <div>
+            <label for="BD" class="block text-sm font-medium mb-1">Birth date</label>
+            <input id="BD" name="BD" type="date" min="1925-01-01" max="2025-10-30" required
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <!--error message-->
+            <div class="text-red-500 text-sm mt-1" id="errorBD"></div>
+          </div>
+
+          <!--6.ehdot-->
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" id="terms" name="terms" value="Accept"
+              class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+            <label for="terms" class="text-sm">I accept the terms</label>
+          </div>
+          <!--error message-->
+          <div class="text-red-500 text-sm" id="errorTerms"></div>
+
+
+          <!--Submit ja Clear Button-->
+          <div class="flex space-x-3 pt-4">
+            <button id="addRowBtn" type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+            <button id="clearBtn" type="reset"
+              class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-2xl p-4">
+      <!--<table class="table" id="userInformation">-->
+      <table class="min-w-full border border-gray-200 text-left">
+        <thead class="bg-blue-100">
+          <tr>
+            <!--<th>Information</th> aikaleima on piilotettu-->
+            <th class="px-4 py-2 border-b">Timestamp</th>
+            <th class="px-4 py-2 border-b">Name</th>
+            <th class="px-4 py-2 border-b">Email</th>
+            <th class="px-4 py-2 border-b">Phone number</th>
+            <th class="px-4 py-2 border-b">Birth date</th>
+            <th class="px-4 py-2 border-b">Check Accepted terms</th>
+          </tr>
+
+        </thead>
+        <tbody id="userInformation" class="divide-y divide-gray-100"></tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>

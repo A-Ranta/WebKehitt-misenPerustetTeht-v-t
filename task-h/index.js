@@ -1,11 +1,11 @@
 // index.js
 // Author: Antti Ranta
-// Date: 27.10.2025
+// Date: 6.11.2025
 
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("registrationForm");
-    const table = document.getElementById("userInformation").querySelector("tbody");
+    const table = document.getElementById("userInformation")//.<querySelector("tbody");
 
     //lomakkeen tekstikentät
     const fields = {
