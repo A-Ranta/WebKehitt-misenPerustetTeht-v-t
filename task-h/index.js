@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const BD = new Date(fields.BD.value);
         const today = new Date();
         if (isNaN(BD)) {
-            errorMessage.BD.textContent = 'Please select your birth date.';
+            errorMessage.BD.textContent = 'Please input your birth date.';
             valid = false;
         } else {
             const age = today.getFullYear() - BD.getFullYear() -
