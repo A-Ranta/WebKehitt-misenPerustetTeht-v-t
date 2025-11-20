@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sidebar Layout</title>
+</head>
+<body class="flex flex-col min-h-screen text-gray-800">
+  <header class="bg-indigo-600 text-white">
+    <nav class="flex justify-center gap-6 p-4">
+      <a href="#" class="hover:underline">Dashboard</a>
+      <a href="#" class="hover:underline">Profile</a>
+      <a href="#" class="hover:underline">Settings</a>
+    </nav>
+  </header>
+
+  <div class="flex flex-grow">
+    <aside class="w-1/4 bg-gray-200 p-4">
+      <ul class="space-y-2">
+        <li><a href="#" class="block hover:underline">Menu 1</a></li>
+        <li><a href="#" class="block hover:underline">Menu 2</a></li>
+        <li><a href="#" class="block hover:underline">Menu 3</a></li>
+      </ul>
+    </aside>
+    <main class="flex-grow bg-gray-50 p-6 text-center">Main Content</main>
+  </div>
+
+  <footer class="bg-gray-800 text-white p-4 text-center">Footer</footer>
+</body>
+</html>

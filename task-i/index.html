@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GameRentals</title>
+</head>
+
+<body class="flex flex-col min-h-screen text-gray-800">
+    <!--Headeri-->
+    <header class="bg-stone-900 text-white text-center p-2">
+        <!--<img class="object-center md:object-top" src="img/GameRentals.png" alt="GameRentals" width="50px" height="5px">-->
+        <h1>GameRentals</h1>
+        <p>Easy And Fast Delivery</p>
+        <nav class="flex justify-center gap-6 p-4">
+            <a href="#" class="hover:underline">About us</a>
+            <a href="#" class="hover:underline">Gaming</a>
+            <a href="#" class="hover:underline">Other</a>
+        </nav>
+    </header>
+    <!--Sivupalkki-->
+    <div class="flex flex-grow md:flex-grow">
+        <aside class="w-1/7 md:w-1/7 bg-gray-200 p-8 text-center rounded-xl shadow-md">
+            <h2 class="shadow-md">Category</h2>
+            <ul class="space-y-2 text-center list-disc list-style-position-inside">
+                <li><a href="#" class="block hover:underline">PS1</a></li>
+                <li><a href="#" class="block hover:underline">PS2</a></li>
+                <li><a href="#" class="block hover:underline">PSP</a></li>
+                <li><a href="#" class="block hover:underline">PS3</a></li>
+                <li><a href="#" class="block hover:underline">PS4</a></li>
+                <li><a href="#" class="block hover:underline">PS5</a></li>
+                <li><a href="#" class="block hover:underline">Xbox 360</a></li>
+                <li><a href="#" class="block hover:underline">Nintendo GameCube</a></li>
+                <li><a href="#" class="block hover:underline">Nintendo DS</a></li>
+                <li><a href="#" class="block hover:underline">PC</a></li>
+            </ul>
+        </aside>
+        <!--Main osio-->
+        <main class="flex-grow p-6 bg-gray-50 text-center">Welcome to GameRentals
+            <section class="">
+                <h2>Rent our games to try out before deciding to buy a new game</h2>
+                <p>We have a wide collection of older and newer games for many platforms available for rent</p>
+                <!--2 kuvaa vierekkäin-->
+                <div class="flex gap-1">
+                    <img class="flex max-w-md mx-auto h-auto object-fill md:object-cover" src="img/shelf.jpg"
+                        alt="GameShelf">
+                    <img class="flexw-full max-w-md mx-auto h-auto object-fill md:object-cover" src="img/closet.jpg"
+                        alt="GameCloset">
+                </div>
+                <p>Click the button below to start browsing our game selection</p>
+                <button class="bg-gray-200 text-black-700 px-4 py-2 rounded hover:bg-blue-100">Start browsing</button>
+            </section>
+        </main>
+    </div>
+
+    <!--Footer osio-->
+    <footer class="bg-stone-900 text-white text-center p-1">Information and socials
+        <div class="container grid md:grid-cols-12 grid cold-1 gap-7 mx-auto py-4 px-9 text-center">
+            <!--Address-->
+            <div class="lg:col-span-4 col-span-4">
+                <h3 class="py-4">Company Address</h3>
+                <p>GameRentals</p>
+                <p>Example Street</p>
+                <p>Example City</p>
+                <p>Open: 10:00-18:00</p>
+                <p>GameRentals@email.com</p>
+            </div>
+            <!--Socials-->
+            <div class="lg:col-span-4 col-span-4">
+                <h4 class="py-4">Socials</h4>
+                <a href="#" class="block hover:underline">Instagram</a>
+                <a href="#" class="block hover:underline">Facebook</a>
+                <a href="#" class="block hover:underline">Discord</a>
+            </div>
+            <!--Copyright-->
+            <div class="lg:col-span-4 col-span-4">Copyright
+                <h5 class="py-4">@Antti Ranta 2025</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
