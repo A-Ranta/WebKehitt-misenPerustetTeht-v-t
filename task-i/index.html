@@ -7,19 +7,52 @@
     <title>GameRentals</title>
 </head>
 
-<body class="flex flex-col min-h-screen text-gray-800">
+<body class="flex flex-col min-h-screen text-stone-950">
     <!--Headeri-->
-    <header class="bg-stone-900 text-white text-center p-2">
-        <!--<img class="object-center md:object-top" src="img/GameRentals.png" alt="GameRentals" width="50px" height="5px">-->
-        <h1>GameRentals</h1>
-        <p>Easy And Fast Delivery</p>
-        <nav class="flex justify-center gap-6 p-4">
-            <a href="#" class="hover:underline">About us</a>
-            <a href="#" class="hover:underline">Gaming</a>
-            <a href="#" class="hover:underline">Other</a>
-        </nav>
+    <header class="bg-rose-900 text-stone-950 text-center items-center">
+        <!--kuva-->
+        <div class="container grid md:grid-cols-12 grid cols-1 gap-7 mx-auto py-4 px-9">
+            <div class="lg:col-span-4 col-span-4">
+                <img class="mx-auto h-auto w-30 md:w-60" src="img/GameRentals.png" alt="GameRentals">
+            </div>
+            <!--Info-->
+            <div class="lg:col-span-4 col-span-4  py-10">
+                <h1 class="font-mono text-2xl">GameRentals</h1>
+                <p class="text-lg">Easy And Fast Video Game Renting</p>
+                <nav class="flex justify-center gap-6 p-4">
+                    <a href="#" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">About us</a>
+                    <a href="#" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Game Catalog</a>
+                    <a href="#" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Other</a>
+                </nav>
+            </div>
+            <!--Hakupalkki lomake-->
+            <div class="lg:col-span-4 col-span-4 flex flex-col justify-center items-center">
+                <label for="search" class="text-lg mb-2">Video Game Search Bar</label>
+                <form class="max-w-md w-full">
+                    <div class="relative">
+                        <input type="search" id="search" class="block w-full px-4 py-2.5 rounded-full"
+                            placeholder="Search for a specific game" />
+                        <button type="button"
+                            class=" hover:underline hover:bg-zinc-700 text-white bg-zinc-600 rounded-full absolute end-1.5 bottom-1.5 px-3 py-1">Search</button>
+                    </div>
+                </form>
+            </div>
+            <!--Lomake
+            <div class="lg:col-span-4 col-span-4 flex justify-center items-center py-10">
+                <form class="max-w-md w-full">
+                    <label for="search" class="text-lg">Video Game Search bar</label>
+                    <div class="relative">
+                        <input type="search" id="search" class=" w-full px-4 py-2.5 rounded-full"
+                            placeholder="Search for a specific game" />
+                        <button type="button"
+                            class="text-white bg-zinc-600 rounded-full absolute end-1.5 bottom-1.5 px-3 py-1">Search</button>
+                    </div>
+                </form>
+            </div>
+        -->
+        </div>
     </header>
-    <!--Sivupalkki-->
+    <!--Sivupalkki
     <div class="flex flex-grow md:flex-grow">
         <aside class="w-1/7 md:w-1/7 bg-gray-200 p-8 text-center rounded-xl shadow-md">
             <h2 class="shadow-md">Category</h2>
@@ -36,30 +69,33 @@
                 <li><a href="#" class="block hover:underline">PC</a></li>
             </ul>
         </aside>
-        <!--Main osio-->
-        <main class="flex-grow p-6 bg-gray-50 text-center">Welcome to GameRentals
-            <section class="">
-                <h2>Rent our games to try out before deciding to buy a new game</h2>
-                <p>We have a wide collection of older and newer games for many platforms available for rent</p>
-                <!--2 kuvaa vierekkäin-->
-                <div class="flex gap-1">
-                    <img class="flex max-w-md mx-auto h-auto object-fill md:object-cover" src="img/shelf.jpg"
-                        alt="GameShelf">
-                    <img class="flexw-full max-w-md mx-auto h-auto object-fill md:object-cover" src="img/closet.jpg"
-                        alt="GameCloset">
-                </div>
-                <p>Click the button below to start browsing our game selection</p>
-                <button class="bg-gray-200 text-black-700 px-4 py-2 rounded hover:bg-blue-100">Start browsing</button>
-            </section>
-        </main>
+    -->
+    <!--Main osio-->
+    <main class="flex-grow p-6 bg-gray-300 text-center text-4xl">Welcome to GameRentals!
+        <section class="">
+            <h2 class="text-lg">Rent our games to try out before deciding to buy a new game</h2>
+            <p class="text-lg">We have a wide collection of older and newer games for many platforms available for rent
+            </p>
+            <!--2 kuvaa vierekkäin-->
+            <div class="flex p-8 gap-3">
+                <img class="flex max-w-md mx-auto h-auto object-fill md:object-cover" src="img/shelf.jpg"
+                    alt="GameShelf">
+                <img class="flexw-full max-w-md mx-auto h-auto object-fill md:object-cover" src="img/closet.jpg"
+                    alt="GameCloset">
+            </div>
+            <p class="text-lg">Click the button below to start browsing our game selection ↓</p>
+            <button class="hover:underline hover:bg-zinc-700 bg-zinc-600 text-stone-950 m-4 px-4 py-2 rounded-full">Start browsing</button>
+        </section>
+    </main>
     </div>
 
     <!--Footer osio-->
-    <footer class="bg-stone-900 text-white text-center p-1">Information and socials
-        <div class="container grid md:grid-cols-12 grid cold-1 gap-7 mx-auto py-4 px-9 text-center">
+    <footer class="bg-rose-900 text-stone-950 text-center">
+        <p class="font-mono text-2xl py-6">Information and socials</p>
+        <div class="container grid md:grid-cols-12 grid cols-1 gap-7 mx-auto py-4 px-9 text-center">
             <!--Address-->
             <div class="lg:col-span-4 col-span-4">
-                <h3 class="py-4">Company Address</h3>
+                <h3 class="font-mono text-2xl p-4">Company Address</h3>
                 <p>GameRentals</p>
                 <p>Example Street</p>
                 <p>Example City</p>
@@ -68,16 +104,18 @@
             </div>
             <!--Socials-->
             <div class="lg:col-span-4 col-span-4">
-                <h4 class="py-4">Socials</h4>
+                <h4 class="font-mono text-2xl p-4">Socials</h4>
                 <a href="#" class="block hover:underline">Instagram</a>
                 <a href="#" class="block hover:underline">Facebook</a>
                 <a href="#" class="block hover:underline">Discord</a>
             </div>
             <!--Copyright-->
-            <div class="lg:col-span-4 col-span-4">Copyright
-                <h5 class="py-4">@Antti Ranta 2025</h5>
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="p-4 font-mono text-2xl">@Copyright</h5>
+                <p>Antti Ranta</p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
