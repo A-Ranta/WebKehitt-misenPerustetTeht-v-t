@@ -9,7 +9,7 @@
 
 <!--
     Author: Antti Ranta
-    Date: 3.12.10.2025
+    Date: 3.12.2025
   -->
 
 <body class="flex flex-col min-h-screen text-stone-950 bg-[url('img/tausta.jpg')] bg-cover bg-center h-full">
@@ -53,31 +53,31 @@
     <!--Main osio lomakkeelle-->
     <main class="bg-gray-300 flex flex-col justify-center items-center p-4">
         <h2 class="font-mono text-2xl">Renting Form</h2>
-        <p>Please fill out the rental forms below to finish your game order</p>
+        <p class="">Please fill out the rental forms below to finish your game order</p>
         <!--Lomake-->
         <form id="GameRentalsForm" class=" flex flex-col gap-2 w-full max-w-xs">
             <p class="font-bold text-center">Customer information</p>
             <!--Nimi-->
-            <div>
+            <div class="text-center">
                 <label for="name" class="">Name</label>
-                <input id="name" name="name" type="text" required min="3" max="25" placeholder="Input full name"
-                    class="w-64 border-2 rounded-lg">
+                <input id="name" name="name" type="text" required min="3" max="25" placeholder="Please input full name"
+                    class="w-full text-center border-2 rounded-lg">
                 <!--Virheilmoitus Nimi-->
                 <div class="text-red-500" id="errorNimi"></div>
             </div>
             <!--Email-->
-            <div>
+            <div class="text-center">
                 <label for="email" class="">Email</label>
-                <input id="email" name="email" type="email" required placeholder="Input email address"
-                    class="w-64 border-2 rounded-lg">
+                <input id="email" name="email" type="email" required placeholder="Please input email address"
+                    class="w-full text-center border-2 rounded-lg">
                 <!--Virheilmoitus Email-->
                 <div class="text-red-500" id="errorEmail"></div>
             </div>
             <!--Puh.Nro-->
-            <div>
+            <div class="text-center">
                 <label for="phone" class="">Phone Number</label>
-                <input id="phone" name="phone" type="tel" required placeholder="Input phone number"
-                    class="border-2 rounded-lg">
+                <input id="phone" name="phone" type="tel" required placeholder="Please input phone number"
+                    class="w-full text-center border-2 rounded-lg">
                 <!--Virheilmoitus Puhelin-->
                 <div class="text-red-500" id="errorPuhelin"></div>
             </div>
@@ -86,7 +86,7 @@
             <div class="text-center">
                 <p class="font-bold">Game</p>
                 <label for="games" class="" required>
-                    <select id="games">
+                    <select id="games" class="w-full text-center rounded-lg">
                         <option selected>Choose a game</option>
                         <option value="TOA">Tales Of Arise (PS5)</option>
                         <option value="RE8"> Resident Evil 8 Village (PS5)</option>
@@ -105,17 +105,19 @@
             <div class="text-center">
                 <p class="font-bold">Rental Period</p>
                 <label for="rentalStart">Start
-                    <input type="date" required min="2025-12-04">
+                    <input type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorStart"></div>
                     <label for="rentalEnd">End
-                        <input type="date" required>
+                        <input type="date" class="w-full text-center rounded-lg" required>
                         <!--Virheilmoitus-->
                         <div class="text-red-500" id="errorEnd"></div>
                     </label>
+                    <!--Määrä-->
                     <p class="font-bold">Quantity</p>
                     <label for="quantity" class="">
-                        <input type="number" min="1" max="3" placeholder="1-3 max" required class="w-32 text-center">
+                        <input type="number" min="1" max="3" placeholder="1-3 max copies per customer" required
+                         class="w-full text-center rounded-lg">
                         <!--Virheilmoitus-->
                         <div class="text-red-500" id="errorQuantity"></div>
                     </label>
@@ -124,8 +126,8 @@
             <!--tekstialue ja chechbox-->
             <div class="text-center">
                 <p class="font-bold">Additional</p>
-                <textarea name="textarea" id="textarea" rows="4" placeholder="Add any comments or wishes here"></textarea
-                    class="w-full">
+                <textarea name="textarea" id="textarea" rows="4" placeholder="Add any comments or wishes here"
+                 class="w-full text-center rounded-lg"></textarea>
             </div>
 
             <!--Checkbox-->
