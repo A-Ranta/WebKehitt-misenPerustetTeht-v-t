@@ -86,8 +86,8 @@
             <div class="text-center pt-4 pb-6">
                 <p class="font-bold">Game</p>
                 <label for="games" class="">
-                    <select id="games" class="w-full text-center rounded-lg" required>
-                        <option selected>Choose a game</option>
+                    <select id="games" class="w-full text-center rounded-lg" required placeholder="game">
+                        <option selected placeholder="game"></option>
                         <option value="TOA">Tales Of Arise (PS5)</option>
                         <option value="RE8"> Resident Evil 8 Village (PS5)</option>
                         <option value="Koudelka">Koudelka (PS1)</option>
@@ -105,11 +105,11 @@
             <div class="text-center">
                 <p class="font-bold">Rental Period</p>
                 <label for="rentalStart">Start
-                    <input type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
+                    <input id="rentalStart" type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorStart"></div>
                     <label for="rentalEnd">End
-                        <input type="date" class="w-full text-center rounded-lg" required>
+                        <input id="rentalEnd" type="date" class="w-full text-center rounded-lg" required>
                         <!--Virheilmoitus-->
                         <div class="text-red-500" id="errorEnd"></div>
                     </label>
@@ -118,7 +118,7 @@
             <div class="text-center pt-4 pb-6">
                 <p class="font-bold">Quantity</p>
                 <label for="quantity" class="">
-                    <input type="number" min="1" max="3" placeholder="1-3 max copies per customer" required
+                    <input id="quantity" type="number" min="1" max="3" placeholder="1-3 max copies per customer" required
                         class="w-full text-center rounded-lg">
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorQuantity"></div>
@@ -136,7 +136,7 @@
             <!--Checkbox-->
             <div class="text-center pt-4 pb-4">
                 <label for="rentalTerms" class="">
-                    <input type="checkbox" class="" required>I accept the rental terms
+                    <input id="rentalTerms type="checkbox" class="" required>I accept the rental terms
                     <!--Virheilmoitus Terms-->
                     <div class="text-red-500" id="errorTerms"></div>
                 </label>
