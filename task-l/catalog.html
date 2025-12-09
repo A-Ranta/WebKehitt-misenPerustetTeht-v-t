@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GameRentals Catalog Page</title>
+</head>
+
+<body class="flex flex-col min-h-screen text-stone-950 bg-[url('img/tausta.jpg')] bg-cover bg-center h-full">
+    <!--Headeri-->
+    <header class="bg-rose-900 text-stone-950 text-center items-center">
+        <!--kuva-->
+        <div class="container grid md:grid-cols-12 grid-cols-1 gap-7 py-4 px-9">
+            <div class="col-span-4">
+                <img class="mx-auto  md:w-60" src="img/GameRentals.png" alt="GameRentals">
+            </div>
+            <!--Info-->
+            <div class="md:col-span-4 col-span-1 py-10">
+                <h1 class="font-mono text-2xl">GameRentals</h1>
+                <p class="text-lg">Easy And Fast Video Game Renting</p>
+                <nav class="flex justify-center gap-6 p-4">
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5 ">About
+                        us</a>
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Game
+                        Catalog</a>
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Other</a>
+                </nav>
+            </div>
+            <!--Hakupalkki lomake-->
+            <div class="md:col-span-4 col-span-1 flex flex-col justify-center items-center">
+                <label for="search" class="text-lg mb-2">Video Game Search Bar</label>
+                <form class="max-w-md w-full">
+                    <div class="relative">
+                        <input type="search" id="search" class="block w-full px-4 py-2.5 rounded-full"
+                            placeholder="Search for a specific game"/>
+                        <button type="button"
+                            class=" hover:underline hover:bg-zinc-700 text-white bg-zinc-600 rounded-full absolute end-1.5 bottom-1.5 px-3 py-1">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!--Sivun tuotteiden esittely/Intro Section-->
+    <section class="text-center p-3 m-3">
+        <h2 class="font-mono text-2xl">Our Most Rented Titles</h2>
+        <p>Below you can see our most popular titles our customers have picked up recently ↓ </p>
+        <p>On the left is our full catalogue of games per platform ←</p>
+    </section>
+    <!--Sivupalkki-->
+    <div class="flex flex-col md:flex-row gap-6">
+        <aside class="w-full md:w-64 p-7 text-center rounded-xl shadow-md border-stone-900 border-2 bg-gray-400">
+            <h3 class="font-mono text-2xl">Category</h3>
+            <ul class="space-y-2 text-center list-disc list-style-position-inside">
+                <li><a href="#" class="block hover:underline border-b">PS1</a></li>
+                <li><a href="#" class="block hover:underline border-b">PS2</a></li>
+                <li><a href="#" class="block hover:underline border-b">PSP</a></li>
+                <li><a href="#" class="block hover:underline border-b">PS3</a></li>
+                <li><a href="#" class="block hover:underline border-b">PS4</a></li>
+                <li><a href="#" class="block hover:underline border-b">PS5</a></li>
+                <li><a href="#" class="block hover:underline border-b">Xbox 360</a></li>
+                <li><a href="#" class="block hover:underline border-b">Nintendo GameCube</a></li>
+                <li><a href="#" class="block hover:underline border-b">Nintendo DS</a></li>
+                <li><a href="#" class="block hover:underline border-b">PC</a></li>
+            </ul>
+        </aside>
+
+        <!--Video-->
+        <figure class="max-w-xl mx-auto">
+            <div class="aspect-video md:aspect-square rounded-xl">
+                <video controls poster="img/GameRentals.png" class="rounded-xl">
+                    <source src="video/webdev.mp4" type="video/mp4">
+            </video>
+            </div>
+            <figcaption class="text-center font-bold text-2xl">Introduction video</figcaption>
+        </figure>
+
+
+        <!--Main osio mx-auto max-w-md-->
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 gap-8 p-8 bg-gray-400 opacity-85 max-w-2xl text-center rounded-xl">
+            <div><img class="object-cover" src="img/TalesOfArise.jpg" alt="Tales Of Arise PS5">
+                <p>Tales Of Arise (PS4)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div><img class="object-cover" src="img/re8.jpg" alt="Resident Evil 8 Village">
+                <p>Resident Evil 8 Village (PS5)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div><img class=" object-cover" src="img/TalesOfBerseria.jpg" alt="Tales Of Berseria PS4">
+                <p>Tales Of Berseria (PS4)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div> <img class="object-cover" src="img/ProjectZero3.jpg" alt="Project Zero 3">
+                <p>Project Zero 3 The Tormented (PS2)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div> <img class="object-cover" src="img/Deception4.jpg" alt="Deception 4">
+                <p>Deception 4 The Nightmare Princess (PS4)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div><img class="object-cover" src="img/EternalDarkness.jpg" alt="Eternal Darkness Sanity's Requiem">
+                <p>Eternal Darkness Sanity's Requiem (GameCube)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div><img class="object-cover" src="img/Koudelka.jpg" alt="Koudelka">
+                <p>Koudelka (PS1)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+
+            <div><img class="object-cover" src="img/Drakengard3.jpg" alt="Drakengard 3">
+                <p>Drakengard 3 (PS3)</p>
+                <p>10e</p>
+                <button class="bg-gray-500 w-full rounded-full">Add to cart</button>
+            </div>
+        </main>
+    </div>
+    <!--Footer osio-->
+    <footer class="bg-rose-900 text-stone-950 text-center">
+        <h4 class="font-mono text-2xl py-6">Information and socials</h4>
+        <div class="container grid md:grid-cols-12 grid-cols-12 gap-7 mx-auto py-4 px-9">
+            <!--Address-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="font-mono text-2xl p-4">Company Address</h5>
+                <p>GameRentals</p>
+                <p>Example Street</p>
+                <p>Example City</p>
+                <p>Open: 10:00-18:00</p>
+                <p>GameRentals@email.com</p>
+            </div>
+            <!--Socials-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="font-mono text-2xl p-4">Socials</h5>
+                <a href="#" class="block hover:underline">Instagram</a>
+                <a href="#" class="block hover:underline">Facebook</a>
+                <a href="#" class="block hover:underline">Discord</a>
+            </div>
+            <!--Copyright-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="p-4 font-mono text-2xl">Copyright</h5>
+                <p>@Antti Ranta</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

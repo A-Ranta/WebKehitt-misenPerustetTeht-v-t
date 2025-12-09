@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GameRentals Order Page</title>
+</head>
+
+<!--
+    Author: Antti Ranta
+    Date: 3.12.2025
+  -->
+
+<body class="flex flex-col min-h-screen text-stone-950 bg-[url('img/tausta.jpg')] bg-cover bg-center h-full">
+    <!--Headeri-->
+    <header class="bg-rose-900 text-stone-950 text-center items-center">
+        <!--kuva-->
+        <div class="container grid md:grid-cols-12 grid-cols-1 gap-7 py-4 px-9">
+            <div class="col-span-4">
+                <img class="mx-auto  md:w-60" src="img/GameRentals.png" alt="GameRentals">
+            </div>
+            <!--Info-->
+            <div class="md:col-span-4 col-span-1 py-10">
+                <h1 class="font-mono text-2xl">GameRentals</h1>
+                <p class="text-lg">Easy And Fast Video Game Renting</p>
+                <nav class="flex justify-center gap-6 p-4">
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5 ">About
+                        us</a>
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Game
+                        Catalog</a>
+                    <a href="#"
+                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-full px-4 py-2.5">Other</a>
+                </nav>
+            </div>
+            <!--Hakupalkki lomake-->
+            <div class="md:col-span-4 col-span-1 flex flex-col justify-center items-center">
+                <label for="search" class="text-lg mb-2">Video Game Search Bar</label>
+                <form class="max-w-md w-full">
+                    <div class="relative">
+                        <input type="search" id="search" class="block w-full px-4 py-2.5 rounded-full"
+                            placeholder="Search for a specific game">
+                        <button type="button"
+                            class=" hover:underline hover:bg-zinc-700 text-black bg-zinc-600 rounded-full absolute end-1.5 bottom-1.5 px-3 py-1">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!--Main osio lomakkeelle-->
+    <main class="bg-gray-300 flex flex-col justify-center items-center p-4">
+        <h2 class="font-mono text-2xl">Videogame Renting Form</h2>
+        <p class="">Please fill out the rental forms below to finish your game order</p>
+        <!--Lomake-->
+        <form id="GameRentalsForm" class=" flex flex-col gap-2 w-full max-w-xs">
+            <p class="font-bold text-center pt-4">Customer information</p>
+            <!--Nimi-->
+            <div class="text-center">
+                <label for="name" class="">Name</label>
+                <input id="name" name="name" type="text" minlength="3" maxlength="25"
+                    placeholder="Please input full name" required class="w-full text-center border-2 rounded-lg">
+                <!--Virheilmoitus Nimi-->
+                <div class="text-red-500" id="errorNimi"></div>
+            </div>
+            <!--Email-->
+            <div class="text-center">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="Please input email address"
+                    class="w-full text-center border-2 rounded-lg">
+                <!--Virheilmoitus Email-->
+                <div class="text-red-500" id="errorEmail"></div>
+            </div>
+            <!--Puh.Nro-->
+            <div class="text-center">
+                <label for="phone" >Phone Number</label>
+                <input id="phone" name="phone" type="tel" required placeholder="Please input phone number"
+                    class="w-full text-center border-2 rounded-lg">
+                <!--Virheilmoitus Puhelin-->
+                <div class="text-red-500" id="errorPuhelin"></div>
+            </div>
+
+            <!--Pelin valitseminen-->
+            <div class="text-center pt-4 pb-6">
+                <p class="font-bold">Game</p>
+                <label for="games" >
+                    <select id="games" class="w-full text-center rounded-lg" required>
+                        <option value="" disabled selected hidden>Choose a game</option>
+                        <option value="TOA">Tales Of Arise (PS5)</option>
+                        <option value="RE8"> Resident Evil 8 Village (PS5)</option>
+                        <option value="Koudelka">Koudelka (PS1)</option>
+                        <option value="Deception4">Deception 4 (PS4)</option>
+                        <option value="Drakengard3">Drakengard 3 (PS3)</option>
+                        <option value="ED">Eternal darkness (GC)</option>
+                        <option value="KH2">Kingdom Hearts 2 (PS2)</option>
+                        <option value="PZ3">Project Zero 3 (PS2)</option>
+                        <option value="TOB">Tales Of Berseria (PS4)</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Aikamääre alku-->
+            <div class="text-center">
+                <p class="font-bold">Rental Period</p>
+                <label for="rentalStart">Start</label>
+                    <input id="rentalStart" type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
+                    <!--Virheilmoitus-->
+                    <div class="text-red-500" id="errorStart"></div>       
+            </div>
+            <!--Aikamääre loppu-->
+            <div class="text-center">
+                <label for="rentalEnd">End</label>
+                    <input id="rentalEnd" type="date" class="w-full text-center rounded-lg" required>
+                    <!--Virheilmoitus-->
+                    <div class="text-red-500" id="errorEnd"></div>
+            </div>
+            <!--Määrä-->
+            <div class="text-center pt-4 pb-6">
+                <p class="font-bold">Quantity</p>
+                <label for="quantity"></label>
+                    <input id="quantity" type="number" min="1" max="3" placeholder="1-3 max copies per customer"
+                        required class="w-full text-center rounded-lg">
+                    <!--Virheilmoitus-->
+                    <div class="text-red-500" id="errorQuantity"></div>
+            </div>
+            <!--tekstialue ja chechbox-->
+            <div class="text-center">
+                <p class="font-bold">Additional</p>
+                <textarea name="textarea" id="textarea" rows="4" placeholder="Add any comments or wishes here"
+                    class="w-full text-center rounded-lg"></textarea>
+            </div>
+            <!--Checkbox-->
+            <div class="text-center pt-4 pb-4">
+                <label for="rentalTerms"></label>
+                    <input id="rentalTerms" type="checkbox"  required>I accept the rental terms
+                    <!--Virheilmoitus Terms-->
+                    <div class="text-red-500" id="errorTerms"></div>
+            </div>
+            <!--Lähetä painike-->
+            <div class="text-center pb-6">
+                <button type="submit" class="bg-zinc-600 rounded-xl w-32">Submit order</button>
+            </div>
+        </form>
+    </main>
+    <!--Footer osio-->
+    <footer class="bg-rose-900 text-stone-950 text-center">
+        <h4 class="font-mono text-2xl py-6">Information and socials</h4>
+        <div class="container grid md:grid-cols-12 grid-cols-12 gap-7 mx-auto py-4 px-9">
+            <!--Address-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="font-mono text-2xl p-4">Company Address</h5>
+                <p>GameRentals</p>
+                <p>Example Street</p>
+                <p>Example City</p>
+                <p>Open: 10:00-18:00</p>
+                <p>GameRentals@email.com</p>
+            </div>
+            <!--Socials-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="font-mono text-2xl p-4">Socials</h5>
+                <a href="#" class="block hover:underline">Instagram</a>
+                <a href="#" class="block hover:underline">Facebook</a>
+                <a href="#" class="block hover:underline">Discord</a>
+            </div>
+            <!--Copyright-->
+            <div class="lg:col-span-4 col-span-4">
+                <h5 class="p-4 font-mono text-2xl">Copyright</h5>
+                <p>@Antti Ranta</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
