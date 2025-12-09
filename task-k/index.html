@@ -60,8 +60,8 @@
             <!--Nimi-->
             <div class="text-center">
                 <label for="name" class="">Name</label>
-                <input id="name" name="name" type="text" minlength="3" maxlength="25" placeholder="Please input full name" required
-                    class="w-full text-center border-2 rounded-lg">
+                <input id="name" name="name" type="text" minlength="3" maxlength="25"
+                    placeholder="Please input full name" required class="w-full text-center border-2 rounded-lg">
                 <!--Virheilmoitus Nimi-->
                 <div class="text-red-500" id="errorNimi"></div>
             </div>
@@ -86,8 +86,8 @@
             <div class="text-center pt-4 pb-6">
                 <p class="font-bold">Game</p>
                 <label for="games" class="">
-                    <select id="games" class="w-full text-center rounded-lg" required placeholder="game">
-                        <option selected placeholder="game"></option>
+                    <select id="games" class="w-full text-center rounded-lg" required>
+                        <option selected>Choose a game</option>
                         <option value="TOA">Tales Of Arise (PS5)</option>
                         <option value="RE8"> Resident Evil 8 Village (PS5)</option>
                         <option value="Koudelka">Koudelka (PS1)</option>
@@ -108,18 +108,22 @@
                     <input id="rentalStart" type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorStart"></div>
-                    <label for="rentalEnd">End
-                        <input id="rentalEnd" type="date" class="w-full text-center rounded-lg" required>
-                        <!--Virheilmoitus-->
-                        <div class="text-red-500" id="errorEnd"></div>
-                    </label>
+                </label>
+            </div>
+
+            <div class="text-center">
+                <label for="rentalEnd">End
+                    <input id="rentalEnd" type="date" class="w-full text-center rounded-lg" required>
+                    <!--Virheilmoitus-->
+                    <div class="text-red-500" id="errorEnd"></div>
+                </label>
             </div>
             <!--Määrä-->
             <div class="text-center pt-4 pb-6">
                 <p class="font-bold">Quantity</p>
                 <label for="quantity" class="">
-                    <input id="quantity" type="number" min="1" max="3" placeholder="1-3 max copies per customer" required
-                        class="w-full text-center rounded-lg">
+                    <input id="quantity" type="number" min="1" max="3" placeholder="1-3 max copies per customer"
+                        required class="w-full text-center rounded-lg">
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorQuantity"></div>
             </div>
@@ -136,7 +140,7 @@
             <!--Checkbox-->
             <div class="text-center pt-4 pb-4">
                 <label for="rentalTerms" class="">
-                    <input id="rentalTerms type="checkbox" class="" required>I accept the rental terms
+                    <input id="rentalTerms type=" checkbox" class="" required>I accept the rental terms
                     <!--Virheilmoitus Terms-->
                     <div class="text-red-500" id="errorTerms"></div>
                 </label>
