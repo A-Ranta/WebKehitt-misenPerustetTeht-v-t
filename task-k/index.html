@@ -87,7 +87,7 @@
                 <p class="font-bold">Game</p>
                 <label for="games" >
                     <select id="games" class="w-full text-center rounded-lg" required>
-                        <option selected>Choose a game</option>
+                        <option value="" disabled selected hidden>Choose a game</option>
                         <option value="TOA">Tales Of Arise (PS5)</option>
                         <option value="RE8"> Resident Evil 8 Village (PS5)</option>
                         <option value="Koudelka">Koudelka (PS1)</option>
@@ -101,22 +101,20 @@
                 </label>
             </div>
 
-            <!--Aikamääre ja määrä-->
+            <!--Aikamääre alku-->
             <div class="text-center">
                 <p class="font-bold">Rental Period</p>
                 <label for="rentalStart">Start</label>
                     <input id="rentalStart" type="date" class="w-full text-center rounded-lg" required min="2025-12-04">
                     <!--Virheilmoitus-->
-                    <div class="text-red-500" id="errorStart"></div>
-                
+                    <div class="text-red-500" id="errorStart"></div>       
             </div>
-
+            <!--Aikamääre loppu-->
             <div class="text-center">
                 <label for="rentalEnd">End</label>
                     <input id="rentalEnd" type="date" class="w-full text-center rounded-lg" required>
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorEnd"></div>
-                
             </div>
             <!--Määrä-->
             <div class="text-center pt-4 pb-6">
@@ -127,16 +125,12 @@
                     <!--Virheilmoitus-->
                     <div class="text-red-500" id="errorQuantity"></div>
             </div>
-
-
-
             <!--tekstialue ja chechbox-->
             <div class="text-center">
                 <p class="font-bold">Additional</p>
                 <textarea name="textarea" id="textarea" rows="4" placeholder="Add any comments or wishes here"
                     class="w-full text-center rounded-lg"></textarea>
             </div>
-
             <!--Checkbox-->
             <div class="text-center pt-4 pb-4">
                 <label for="rentalTerms"></label>
@@ -144,14 +138,12 @@
                     <!--Virheilmoitus Terms-->
                     <div class="text-red-500" id="errorTerms"></div>
             </div>
-
             <!--Lähetä painike-->
             <div class="text-center pb-6">
                 <button type="submit" class="bg-zinc-600 rounded-xl w-32">Submit order</button>
             </div>
         </form>
     </main>
-
     <!--Footer osio-->
     <footer class="bg-rose-900 text-stone-950 text-center">
         <h4 class="font-mono text-2xl py-6">Information and socials</h4>
@@ -180,5 +172,4 @@
         </div>
     </footer>
 </body>
-
 </html>
