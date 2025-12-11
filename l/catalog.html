@@ -9,36 +9,32 @@
 
 <body class="flex flex-col min-h-screen text-stone-950 bg-[url('img/tausta.jpg')] bg-cover bg-center h-full">
     <!--Headeri-->
-    <header class="bg-rose-900 text-stone-950 text-center items-center">
-        <!--kuva-->
-        <div class="container grid md:grid-cols-12 grid-cols-1 gap-7 py-4 px-9">
-            <div class="col-span-4">
+    <header class="bg-rose-900 text-stone-950 text-center flex items-center justify-center">      
+        <div class="container grid grid-cols-1 md:grid-cols-12 gap-7 py-4 px-9">
+            <!--kuva-->
+            <div class="md:col-span-4 flex justify-center">
                 <a href="index.html">
-                <img class="mx-auto  md:w-60" src="img/GameRentals.png" alt="GameRentals">
+                <img class="mx-auto md:w-60" src="img/GameRentals.png" alt="GameRentals">
                 </a>
             </div>
             <!--Info-->
-            <div class="md:col-span-4 col-span-1 py-10">
-                <a href="index.html" class="hover:underline text-2xl font-semibold">GameRentals</a>
+            <div class="md:col-span-4 pt-10">
+                <a href="catalog.html" class="hover:underline text-2xl font-semibold">GameRentals</a>
                 <p class="text-lg">Easy And Fast Video Game Renting</p>
-                <nav class="flex justify-center gap-6 p-4">
-                    <a href="index.html"
-                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5 ">About
-                        us</a>
-                    <a href="catalog.html"
-                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5">Game
-                        Catalog</a>
-                    <a href="order.html"
-                        class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5">Rent</a>
+                <!--Navigointi-->
+                <nav class="flex flex-wrap justify-center gap-6 p-4">
+                    <a href="index.html" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5">About us</a>
+                    <a href="catalog.html" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5">Game Catalog</a>
+                    <a href="order.html" class="hover:underline hover:bg-zinc-700 text-gray bg-zinc-600 rounded-xl px-4 py-2.5">Rent</a>
                 </nav>
             </div>
             <!--Hakupalkki lomake-->
-            <div class="md:col-span-4 col-span-1 flex flex-col justify-center items-center">
+            <div class="md:col-span-4 flex flex-col justify-center items-center">
                 <label for="search" class="text-lg mb-2">Video Game Search Bar</label>
                 <form class="max-w-md w-full">
                     <div class="relative">
                         <input type="search" id="search" class="block w-full px-4 py-2.5 rounded-full"
-                            placeholder="Search for a specific game"/>
+                            placeholder="Search for games">
                         <button type="button"
                             class=" hover:underline hover:bg-zinc-700 text-white bg-zinc-600 rounded-full absolute end-1.5 bottom-1.5 px-3 py-1">Search</button>
                     </div>
@@ -82,58 +78,58 @@
 
 
         <!--Main osio mx-auto max-w-md-->
-        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 gap-8 p-8 bg-gray-400 opacity-85 max-w-2xl text-center rounded-xl">
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8 bg-gray-400 opacity-85 max-w-2xl text-center rounded-xl">
             <div><img class="object-cover" src="img/TalesOfArise.jpg" alt="Tales Of Arise PS5">
                 <p>Tales Of Arise (PS4)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div><img class="object-cover" src="img/re8.jpg" alt="Resident Evil 8 Village">
                 <p>Resident Evil 8 Village (PS5)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div><img class=" object-cover" src="img/TalesOfBerseria.jpg" alt="Tales Of Berseria PS4">
                 <p>Tales Of Berseria (PS4)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div> <img class="object-cover" src="img/ProjectZero3.jpg" alt="Project Zero 3">
                 <p>Project Zero 3 The Tormented (PS2)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div> <img class="object-cover" src="img/Deception4.jpg" alt="Deception 4">
                 <p>Deception 4 The Nightmare Princess (PS4)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div><img class="object-cover" src="img/EternalDarkness.jpg" alt="Eternal Darkness Sanity's Requiem">
                 <p>Eternal Darkness Sanity's Requiem (GameCube)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div><img class="object-cover" src="img/Koudelka.jpg" alt="Koudelka">
                 <p>Koudelka (PS1)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
 
             <div><img class="object-cover" src="img/Drakengard3.jpg" alt="Drakengard 3">
                 <p>Drakengard 3 (PS3)</p>
                 <p>10e</p>
-                <button class="bg-gray-500 w-full rounded-full">Rent</button>
+                <a href="order.html" class="bg-gray-500 rounded-xl px-6 px-3">Rent</a>
             </div>
         </main>
     </div>
     <!--Footer osio-->
-    <footer class="bg-rose-900 text-stone-950 text-center">
+    <footer class="bg-rose-900 text-stone-950 text-center mt-auto">
         <h4 class="font-mono text-2xl py-6">Information and socials</h4>
         <div class="container grid md:grid-cols-12 grid-cols-12 gap-7 mx-auto py-4 px-9">
             <!--Address-->
